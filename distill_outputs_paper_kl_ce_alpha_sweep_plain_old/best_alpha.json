@@ -1,0 +1,7 @@
+{
+  "alpha": 0.4,
+  "student_test_loss": 0.3126758933067322,
+  "student_test_accuracy": 0.9024389982223511,
+  "teacher_test_accuracy": 0.6341463414634146,
+  "output_dir": "distill_outputs_paper_kl_ce_alpha_sweep_plain/alpha_0_40"
+}

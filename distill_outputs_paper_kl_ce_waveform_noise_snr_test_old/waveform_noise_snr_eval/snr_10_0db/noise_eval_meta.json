@@ -1,0 +1,8 @@
+{
+  "snr_db": 10.0,
+  "student_test_loss": 0.45785343647003174,
+  "student_test_accuracy": 0.8617886304855347,
+  "support": 123,
+  "noise_domain": "waveform",
+  "output_dir": "distill_outputs_paper_kl_ce_waveform_noise_snr_test_old/waveform_noise_snr_eval/snr_10_0db"
+}

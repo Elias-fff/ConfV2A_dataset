@@ -1,0 +1,84 @@
+{
+  "audio_path": "/Users/slade/Desktop/improve/sensor_plot_project/bottle_1/1.wav",
+  "model_path": "/Users/slade/Desktop/improve/distill_outputs_paper_kl_ce_noise/student_audio_only.keras",
+  "aggregation": "mean",
+  "predicted_label": "bottle_1000",
+  "predicted_index": 0,
+  "file_level_probabilities": {
+    "bottle_1000": 0.8948398232460022,
+    "bottle_500": 0.024635054171085358,
+    "bottle_can_330": 0.014539957046508789,
+    "bottle_can_500": 0.04410107806324959,
+    "error": 0.021884307265281677
+  },
+  "window_count": 158,
+  "event_duration_sec": 0.8,
+  "hop_sec": 0.8,
+  "top_windows": [
+    {
+      "window_index": 78,
+      "start_sec": 62.400001525878906,
+      "predicted_label": "bottle_1000",
+      "confidence": 0.999840497970581,
+      "probabilities": {
+        "bottle_1000": 0.999840497970581,
+        "bottle_500": 4.610240011970745e-06,
+        "bottle_can_330": 2.495881290087709e-06,
+        "bottle_can_500": 1.2465443433029577e-05,
+        "error": 0.0001397731975885108
+      }
+    },
+    {
+      "window_index": 81,
+      "start_sec": 64.80000305175781,
+      "predicted_label": "bottle_1000",
+      "confidence": 0.9997915625572205,
+      "probabilities": {
+        "bottle_1000": 0.9997915625572205,
+        "bottle_500": 6.217323061719071e-06,
+        "bottle_can_330": 2.078542138406192e-06,
+        "bottle_can_500": 1.3940181815996766e-05,
+        "error": 0.0001862507633632049
+      }
+    },
+    {
+      "window_index": 111,
+      "start_sec": 88.80000305175781,
+      "predicted_label": "bottle_1000",
+      "confidence": 0.9993523955345154,
+      "probabilities": {
+        "bottle_1000": 0.9993523955345154,
+        "bottle_500": 0.0005280418554320931,
+        "bottle_can_330": 5.011775556340581e-06,
+        "bottle_can_500": 2.691742338356562e-05,
+        "error": 8.77395214047283e-05
+      }
+    },
+    {
+      "window_index": 133,
+      "start_sec": 106.4000015258789,
+      "predicted_label": "bottle_1000",
+      "confidence": 0.999313473701477,
+      "probabilities": {
+        "bottle_1000": 0.999313473701477,
+        "bottle_500": 9.110043902182952e-05,
+        "bottle_can_330": 7.529198046540841e-05,
+        "bottle_can_500": 0.00011157889093738049,
+        "error": 0.00040853582322597504
+      }
+    },
+    {
+      "window_index": 35,
+      "start_sec": 28.0,
+      "predicted_label": "bottle_1000",
+      "confidence": 0.9992262125015259,
+      "probabilities": {
+        "bottle_1000": 0.9992262125015259,
+        "bottle_500": 0.0001617981615709141,
+        "bottle_can_330": 3.4886379580711946e-05,
+        "bottle_can_500": 0.00014448836736846715,
+        "error": 0.0004326455236878246
+      }
+    }
+  ]
+}

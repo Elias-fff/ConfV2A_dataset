@@ -1,0 +1,11 @@
+                precision    recall  f1-score   support
+
+   bottle_1000     0.8636    0.7917    0.8261        24
+    bottle_500     1.0000    0.9412    0.9697        34
+bottle_can_330     0.8636    0.8636    0.8636        22
+bottle_can_500     0.7812    0.9259    0.8475        27
+         error     0.9333    0.8750    0.9032        16
+
+      accuracy                         0.8862       123
+     macro avg     0.8884    0.8795    0.8820       123
+  weighted avg     0.8923    0.8862    0.8872       123

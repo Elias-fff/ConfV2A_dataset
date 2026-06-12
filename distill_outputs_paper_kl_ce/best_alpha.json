@@ -1,0 +1,6 @@
+{
+  "alpha": 0.2,
+  "test_loss": 3.4518110752105713,
+  "test_accuracy": 0.6226993799209595,
+  "output_dir": "distill_outputs_paper_kl_ce"
+}

@@ -1,0 +1,6 @@
+alpha,student_test_loss,student_test_accuracy,teacher_test_accuracy,output_dir
+0.1,0.3998684883117676,0.8536585569381714,0.6341463414634146,distill_outputs_paper_kl_ce_alpha_sweep_plain/alpha_0_10
+0.2,0.3562473952770233,0.869918704032898,0.6341463414634146,distill_outputs_paper_kl_ce_alpha_sweep_plain/alpha_0_20
+0.3,0.32865744829177856,0.8943089246749878,0.6341463414634146,distill_outputs_paper_kl_ce_alpha_sweep_plain/alpha_0_30
+0.4,0.3126758933067322,0.9024389982223511,0.6341463414634146,distill_outputs_paper_kl_ce_alpha_sweep_plain/alpha_0_40
+0.5,0.3761485815048218,0.869918704032898,0.6341463414634146,distill_outputs_paper_kl_ce_alpha_sweep_plain/alpha_0_50

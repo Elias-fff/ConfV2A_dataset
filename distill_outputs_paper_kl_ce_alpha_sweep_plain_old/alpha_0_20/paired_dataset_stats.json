@@ -1,0 +1,67 @@
+[
+  {
+    "label": "bottle_1000",
+    "audio_path": "sensor_plot_project/bottle_1/1.wav",
+    "vibration_path": "processed/bottle_1000.csv",
+    "paired_window_count": 156,
+    "shared_duration_sec": 125.02200317382812,
+    "audio_duration_sec": 127.137,
+    "vibration_duration_sec": 125.02200317382812,
+    "audio_offset_sec": 0.0,
+    "vibration_offset_sec": 0.0,
+    "teacher_window_size": 243,
+    "avg_teacher_windows_per_audio": 1.0
+  },
+  {
+    "label": "bottle_500",
+    "audio_path": "sensor_plot_project/bottle_500/500ml.wav",
+    "vibration_path": "processed/bottle_500.csv",
+    "paired_window_count": 222,
+    "shared_duration_sec": 177.6790008544922,
+    "audio_duration_sec": 180.527375,
+    "vibration_duration_sec": 177.6790008544922,
+    "audio_offset_sec": 0.0,
+    "vibration_offset_sec": 0.0,
+    "teacher_window_size": 243,
+    "avg_teacher_windows_per_audio": 1.0
+  },
+  {
+    "label": "bottle_can_330",
+    "audio_path": "sensor_plot_project/bottle_yi_330/yi_330.wav",
+    "vibration_path": "processed/bottle_can_330.csv",
+    "paired_window_count": 148,
+    "shared_duration_sec": 118.72899627685547,
+    "audio_duration_sec": 121.8506875,
+    "vibration_duration_sec": 118.72899627685547,
+    "audio_offset_sec": 0.0,
+    "vibration_offset_sec": 0.0,
+    "teacher_window_size": 243,
+    "avg_teacher_windows_per_audio": 1.0
+  },
+  {
+    "label": "bottle_can_500",
+    "audio_path": "sensor_plot_project/bottle_yi_500/yi_500.wav",
+    "vibration_path": "processed/bottle_can_500.csv",
+    "paired_window_count": 181,
+    "shared_duration_sec": 145.38800048828125,
+    "audio_duration_sec": 149.755,
+    "vibration_duration_sec": 145.38800048828125,
+    "audio_offset_sec": 0.0,
+    "vibration_offset_sec": 0.0,
+    "teacher_window_size": 243,
+    "avg_teacher_windows_per_audio": 1.0
+  },
+  {
+    "label": "error",
+    "audio_path": "sensor_plot_project/error/error.wav",
+    "vibration_path": "processed/error.csv",
+    "paired_window_count": 107,
+    "shared_duration_sec": 86.00900268554688,
+    "audio_duration_sec": 87.417,
+    "vibration_duration_sec": 86.00900268554688,
+    "audio_offset_sec": 0.0,
+    "vibration_offset_sec": 0.0,
+    "teacher_window_size": 243,
+    "avg_teacher_windows_per_audio": 1.0
+  }
+]

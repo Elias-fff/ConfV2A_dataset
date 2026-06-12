@@ -1,0 +1,2 @@
+alpha,test_loss,test_accuracy,output_dir
+0.2,3.4518110752105713,0.6226993799209595,distill_outputs_paper_kl_ce

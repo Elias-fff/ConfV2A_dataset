@@ -1,0 +1,78 @@
+{
+  "variant": "no_confidence_existing_student_waveform_noise_eval",
+  "student_model": "/Users/slade/Desktop/会议/improve/distill_outputs_paper_kl_ce_no_confidence_old/student_audio_only.keras",
+  "teacher_model": "/Users/slade/Desktop/会议/improve/original_time_aligned_tcn_teacher_outputs/teacher_vibration.keras",
+  "teacher_window_size": 243,
+  "split_mode": "blocked_time",
+  "audio_target_sr": 16000,
+  "event_duration_sec": 0.8,
+  "hop_sec": 0.8,
+  "audio_highpass_hz": 80.0,
+  "nperseg": 512,
+  "noverlap": 384,
+  "max_freq_hz": 6000.0,
+  "noise_snr_db_list": [
+    30.0,
+    20.0,
+    10.0,
+    5.0,
+    0.0
+  ],
+  "noise_domain": "waveform",
+  "clean_test_loss": 0.3537243604660034,
+  "clean_test_accuracy": 0.869918704032898,
+  "noise_eval": [
+    {
+      "snr_db": 30.0,
+      "student_test_loss": 0.3523072898387909,
+      "student_test_accuracy": 0.8780487775802612,
+      "support": 123,
+      "noise_domain": "waveform",
+      "output_dir": "distill_outputs_paper_kl_ce_no_confidence_waveform_noise_snr_test_old/waveform_noise_snr_eval/snr_30_0db"
+    },
+    {
+      "snr_db": 20.0,
+      "student_test_loss": 0.3640982210636139,
+      "student_test_accuracy": 0.8861788511276245,
+      "support": 123,
+      "noise_domain": "waveform",
+      "output_dir": "distill_outputs_paper_kl_ce_no_confidence_waveform_noise_snr_test_old/waveform_noise_snr_eval/snr_20_0db"
+    },
+    {
+      "snr_db": 10.0,
+      "student_test_loss": 0.5016767978668213,
+      "student_test_accuracy": 0.8373983502388,
+      "support": 123,
+      "noise_domain": "waveform",
+      "output_dir": "distill_outputs_paper_kl_ce_no_confidence_waveform_noise_snr_test_old/waveform_noise_snr_eval/snr_10_0db"
+    },
+    {
+      "snr_db": 5.0,
+      "student_test_loss": 0.6988585591316223,
+      "student_test_accuracy": 0.7479674816131592,
+      "support": 123,
+      "noise_domain": "waveform",
+      "output_dir": "distill_outputs_paper_kl_ce_no_confidence_waveform_noise_snr_test_old/waveform_noise_snr_eval/snr_5_0db"
+    },
+    {
+      "snr_db": 0.0,
+      "student_test_loss": 1.7225929498672485,
+      "student_test_accuracy": 0.5528455376625061,
+      "support": 123,
+      "noise_domain": "waveform",
+      "output_dir": "distill_outputs_paper_kl_ce_no_confidence_waveform_noise_snr_test_old/waveform_noise_snr_eval/snr_0_0db"
+    }
+  ],
+  "label_to_int": {
+    "bottle_1000": 0,
+    "bottle_500": 1,
+    "bottle_can_330": 2,
+    "bottle_can_500": 3,
+    "error": 4
+  },
+  "student_input_shape": [
+    193,
+    97,
+    1
+  ]
+}

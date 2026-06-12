@@ -1,0 +1,42 @@
+[
+  {
+    "snr_db": 30.0,
+    "student_test_loss": 0.39692696928977966,
+    "student_test_accuracy": 0.8536585569381714,
+    "support": 123,
+    "noise_domain": "waveform",
+    "output_dir": "distill_outputs_paper_kl_ce_waveform_noise_snr_test/waveform_noise_snr_eval/snr_30_0db"
+  },
+  {
+    "snr_db": 20.0,
+    "student_test_loss": 0.39361387491226196,
+    "student_test_accuracy": 0.8373983502388,
+    "support": 123,
+    "noise_domain": "waveform",
+    "output_dir": "distill_outputs_paper_kl_ce_waveform_noise_snr_test/waveform_noise_snr_eval/snr_20_0db"
+  },
+  {
+    "snr_db": 10.0,
+    "student_test_loss": 0.5732549428939819,
+    "student_test_accuracy": 0.8130081295967102,
+    "support": 123,
+    "noise_domain": "waveform",
+    "output_dir": "distill_outputs_paper_kl_ce_waveform_noise_snr_test/waveform_noise_snr_eval/snr_10_0db"
+  },
+  {
+    "snr_db": 5.0,
+    "student_test_loss": 0.6707711815834045,
+    "student_test_accuracy": 0.7886179089546204,
+    "support": 123,
+    "noise_domain": "waveform",
+    "output_dir": "distill_outputs_paper_kl_ce_waveform_noise_snr_test/waveform_noise_snr_eval/snr_5_0db"
+  },
+  {
+    "snr_db": 0.0,
+    "student_test_loss": 1.551089882850647,
+    "student_test_accuracy": 0.5365853905677795,
+    "support": 123,
+    "noise_domain": "waveform",
+    "output_dir": "distill_outputs_paper_kl_ce_waveform_noise_snr_test/waveform_noise_snr_eval/snr_0_0db"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "method": "time_aligned_tcn_teacher",
+  "model_variant": "strong_v2",
+  "teacher_window_size": 243,
+  "audio_target_sr": 16000,
+  "event_duration_sec": 0.8,
+  "hop_sec": 0.3,
+  "split_mode": "blocked_time",
+  "audio_highpass_hz": 80.0,
+  "audio_offset_sec": 0.0,
+  "vibration_offset_sec": 0.0,
+  "shared_duration_sec": null,
+  "test_loss": 0.7494328022003174,
+  "test_accuracy": 0.8773006200790405,
+  "class_weight": null,
+  "label_to_int": {
+    "bottle_1000": 0,
+    "bottle_500": 1,
+    "bottle_can_330": 2,
+    "bottle_can_500": 3,
+    "error": 4
+  },
+  "input_shape": [
+    243,
+    8
+  ]
+}
