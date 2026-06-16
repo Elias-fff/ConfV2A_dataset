@@ -19,7 +19,7 @@ ConfV2A trains an audio-only bottle classifier with help from synchronized vibra
 If you are visiting this project for the first time, follow this order:
 
 1. **Understand the idea:** start with the overview figure above.
-2. **Inspect the data collection setup:** see [Dataset At A Glance](#dataset-at-a-glance).
+2. **Inspect the data collection setup:** see [Dataset At A Glance](#dataset-Overview).
 3. **Read the model pipeline:** see [Method](#method).
 4. **Run the core scripts:** follow [Quick Start](#quick-start).
 5. **Check outputs and comparisons:** see [Results](#results) and [Repository Map](#repository-map).
@@ -35,7 +35,7 @@ On the self-collected bottle/can compaction dataset, ConfV2A improves the audio-
 | Standard KD audio student | Audio | 86.99% | 86.62% |
 | **ConfV2A audio student** | **Audio** | **90.24%** | **89.83%** |
 
-## Dataset At A Glance
+## Dataset Overview
 
 The self-collected dataset contains synchronized microphone audio and vibration recordings from a bottle-recycling compactor. Audio and vibration windows are temporally aligned so that the vibration teacher can supervise the acoustic student during training.
 
