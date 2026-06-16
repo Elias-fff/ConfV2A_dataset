@@ -207,8 +207,3 @@ original_time_aligned_tcn_teacher_outputs/
 For the main paper-aligned results, prioritize folders ending in `_old`. The `time_aligned_*` and `*_new` folders are supplementary runs using newly trained models after a system update.
 
 
-## Contact
-
-Junfu Zhang  
-Friedrich-Alexander-Universitat Erlangen-Nurnberg  
-junfu.zhang@fau.de
