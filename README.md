@@ -19,7 +19,7 @@ ConfV2A trains an audio-only bottle classifier with help from synchronized vibra
 If you are visiting this project for the first time, follow this order:
 
 1. **Understand the idea:** start with the overview figure above.
-2. **Inspect the data collection setup:** see [Dataset At A Glance](#dataset-Overview).
+2. **Inspect the data collection setup:** see [Dataset Overview](#dataset-Overview).
 3. **Read the model pipeline:** see [Method](#method).
 4. **Run the core scripts:** follow [Quick Start](#quick-start).
 5. **Check outputs and comparisons:** see [Results](#results) and [Repository Map](#repository-map).
