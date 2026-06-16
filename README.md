@@ -1,6 +1,6 @@
 # ConfV2A Dataset and Code
 
-**Confidence-Guided Vibration-to-Acoustic Distillation for Bottle Classification in Recycling Compactors**
+**Confidence-Guided Vibration-to-Acoustic Distillation for Bottle Classification in Recycling**
 
 ConfV2A trains an audio-only bottle classifier with help from synchronized vibration signals. A vibration teacher is used during training, but deployment only needs microphone audio.
 
