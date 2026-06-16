@@ -206,18 +206,6 @@ original_time_aligned_tcn_teacher_outputs/
 
 For the main paper-aligned results, prioritize folders ending in `_old`. The `time_aligned_*` and `*_new` folders are supplementary runs using newly trained models after a system update.
 
-## Citation
-
-If you use this dataset or code, please cite:
-
-```bibtex
-@inproceedings{zhang2026confv2a,
-  title = {Confidence-Guided Vibration-to-Acoustic Distillation for Bottle Classification in Recycling},
-  author = {Zhang, Junfu and Ren, Yongxu and Deichsel, Felix and Beckerle, Philipp},
-  booktitle = {IEEE Sensors},
-  year = {2026}
-}
-```
 
 ## Contact
 
