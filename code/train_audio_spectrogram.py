@@ -26,11 +26,11 @@ from audio_student_model import (
 
 
 DEFAULT_AUDIO_ONLY_CONFIG = {
-    "bottle_1000": "sensor_plot_project/bottle_1/1.wav",
-    "bottle_500": "sensor_plot_project/bottle_500/500ml.wav",
-    "bottle_can_330": "sensor_plot_project/bottle_yi_330/yi_330.wav",
-    "bottle_can_500": "sensor_plot_project/bottle_yi_500/yi_500.wav",
-    "error": "sensor_plot_project/error/error.wav",
+    "bottle_1000": "data/raw/sensor_plot_project/bottle_1/1.wav",
+    "bottle_500": "data/raw/sensor_plot_project/bottle_500/500ml.wav",
+    "bottle_can_330": "data/raw/sensor_plot_project/bottle_yi_330/yi_330.wav",
+    "bottle_can_500": "data/raw/sensor_plot_project/bottle_yi_500/yi_500.wav",
+    "error": "data/raw/sensor_plot_project/error/error.wav",
 }
 
 
@@ -88,7 +88,7 @@ def parse_args():
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("audio_spectrogram_outputs"),
+        default=Path("results/audio_spectrogram_outputs"),
         help="Directory used to store the model and figures.",
     )
     return parser.parse_args()

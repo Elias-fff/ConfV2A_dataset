@@ -42,7 +42,7 @@ from train_audio_student_distill_tcn_teacher import (
 
 REPO_ROOT = Path(__file__).resolve().parent
 DEFAULT_NO_CONFIDENCE_STUDENT = (
-    "/Users/slade/Desktop/会议/improve/distill_outputs_paper_kl_ce_no_confidence_old/student_audio_only.keras"
+    "results/distill_outputs_paper_kl_ce_no_confidence_old/student_audio_only.keras"
 )
 
 
@@ -94,7 +94,7 @@ def parse_args():
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("distill_outputs_paper_kl_ce_no_confidence_waveform_noise_snr_test"),
+        default=Path("results/distill_outputs_paper_kl_ce_no_confidence_waveform_noise_snr_test"),
     )
     return parser.parse_args()
 

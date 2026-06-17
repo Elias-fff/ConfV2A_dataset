@@ -74,7 +74,7 @@ def parse_args():
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("time_aligned_tcn_teacher_outputs"),
+        default=Path("results/time_aligned_tcn_teacher_outputs"),
     )
     return parser.parse_args()
 

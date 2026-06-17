@@ -27,24 +27,24 @@ from layers.tcn import TCN
 
 DEFAULT_PAIRED_CONFIG = {
     "bottle_1000": {
-        "audio": "sensor_plot_project/bottle_1/1.wav",
-        "vibration": "processed/bottle_1000.csv",
+        "audio": "data/raw/sensor_plot_project/bottle_1/1.wav",
+        "vibration": "data/processed/bottle_1000.csv",
     },
     "bottle_500": {
-        "audio": "sensor_plot_project/bottle_500/500ml.wav",
-        "vibration": "processed/bottle_500.csv",
+        "audio": "data/raw/sensor_plot_project/bottle_500/500ml.wav",
+        "vibration": "data/processed/bottle_500.csv",
     },
     "bottle_can_330": {
-        "audio": "sensor_plot_project/bottle_yi_330/yi_330.wav",
-        "vibration": "processed/bottle_can_330.csv",
+        "audio": "data/raw/sensor_plot_project/bottle_yi_330/yi_330.wav",
+        "vibration": "data/processed/bottle_can_330.csv",
     },
     "bottle_can_500": {
-        "audio": "sensor_plot_project/bottle_yi_500/yi_500.wav",
-        "vibration": "processed/bottle_can_500.csv",
+        "audio": "data/raw/sensor_plot_project/bottle_yi_500/yi_500.wav",
+        "vibration": "data/processed/bottle_can_500.csv",
     },
     "error": {
-        "audio": "sensor_plot_project/error/error.wav",
-        "vibration": "processed/error.csv",
+        "audio": "data/raw/sensor_plot_project/error/error.wav",
+        "vibration": "data/processed/error.csv",
     },
 }
 
@@ -105,7 +105,7 @@ def parse_args():
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("distill_outputs"),
+        default=Path("results/distill_outputs"),
         help="Directory used to store the teacher, student, and label map.",
     )
     return parser.parse_args()

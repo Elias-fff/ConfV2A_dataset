@@ -32,7 +32,7 @@ def parse_args():
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("distill_outputs_paper_kl_ce_alpha_sweep_plain_old"),
+        default=Path("results/distill_outputs_paper_kl_ce_alpha_sweep_plain_old"),
     )
     parser.add_argument(
         "--train-script",

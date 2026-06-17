@@ -14,9 +14,9 @@ from audio_student_model import (
 
 
 DEFAULT_RUN_DIR = Path(
-    "/Users/slade/Desktop/improve/distill_outputs_paper_kl_ce_noise"
+    "results/distill_outputs_paper_kl_ce_old"
 )
-DEFAULT_OUTPUT_DIR = Path("/Users/slade/Desktop/improve/test")
+DEFAULT_OUTPUT_DIR = Path("results/test")
 
 
 def parse_args():

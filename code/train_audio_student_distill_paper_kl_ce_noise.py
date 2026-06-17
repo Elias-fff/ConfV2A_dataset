@@ -53,10 +53,10 @@ PAPER_SETTINGS = {
 }
 
 DEFAULT_TIME_ALIGNED_TEACHER = Path(
-    "/Users/slade/Desktop/会议/improve/original_time_aligned_tcn_teacher_outputs/teacher_vibration.keras"
+    "results/original_time_aligned_tcn_teacher_outputs/teacher_vibration.keras"
 )
 DEFAULT_TIME_ALIGNED_AUDIO_STUDENT = Path(
-    "/Users/slade/Desktop/会议/improve/original_time_aligned_audio_spectrogram_outputs/audio_spectrogram_cnn.keras"
+    "results/original_time_aligned_audio_spectrogram_outputs/audio_spectrogram_cnn.keras"
 )
 
 
@@ -251,7 +251,7 @@ def parse_args():
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("distill_outputs_paper_kl_ce_noise_old"),
+        default=Path("results/distill_outputs_paper_kl_ce_noise_old"),
     )
     parser.add_argument(
         "--noise-snr-db-list",
