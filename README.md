@@ -4,7 +4,7 @@
 
 ConfV2A trains an audio-only bottle classifier with help from synchronized vibration signals. A vibration teacher is used during training, but deployment only needs microphone audio.
 
-![ConfV2A overview](figures/confv2a_overview.png)
+![ConfV2A overview](figures/overview.png)
 
 ## Highlights
 
@@ -80,10 +80,10 @@ ConfV2A uses vibration as a privileged training-time modality:
 The main loss is:
 
 ```text
-L = (1 - alpha) * CE + alpha * c_teacher * KL
+L = (1 - alpha) * CE + alpha * c_i * KL
 ```
 
-where `CE` is the ground-truth cross-entropy loss, `KL` transfers teacher soft-label information, `c_teacher` is the teacher confidence, `temperature=3.0`, and `alpha=0.4` in the main experiment.
+where `CE` is the ground-truth cross-entropy loss, `KL` transfers teacher soft-label information, `c_i` is the teacher confidence, `temperature=3.0`, and `alpha=0.4` in the main experiment.
 
 ## Code Navigation
 
@@ -110,15 +110,6 @@ python code/train_audio_student_distill_paper_kl_ce.py
 ```
 
 ## Results
-
-### Noise Robustness
-
-ConfV2A keeps a consistent advantage over standard KD under waveform-level Gaussian noise.
-
-| Model | Clean | 30 dB | 20 dB | 10 dB | 5 dB | 0 dB |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Standard KD | 86.99% | 87.80% | 88.62% | 83.74% | 74.80% | 55.28% |
-| **ConfV2A** | **90.24%** | **91.87%** | **90.24%** | **86.18%** | **78.86%** | **56.10%** |
 
 ### Cross-Dataset Comparison
 
@@ -177,8 +168,3 @@ results/original_time_aligned_tcn_teacher_outputs/
 
 For the main paper-aligned results, prioritize folders ending in `_old`. The `time_aligned_*` and `*_new` folders are supplementary runs using newly trained models after a system update.
 
-## Contact
-
-Junfu Zhang  
-Friedrich-Alexander-Universitat Erlangen-Nurnberg  
-junfu.zhang@fau.de
