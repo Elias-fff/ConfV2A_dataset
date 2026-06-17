@@ -80,10 +80,10 @@ ConfV2A uses vibration as a privileged training-time modality:
 The main loss is:
 
 ```text
-L = (1 - alpha) * CE + alpha * c_teacher * KL
+L = (1 - alpha) * CE + alpha * c_i * KL
 ```
 
-where `CE` is the ground-truth cross-entropy loss, `KL` transfers teacher soft-label information, `c_teacher` is the teacher confidence, `temperature=3.0`, and `alpha=0.4` in the main experiment.
+where `CE` is the ground-truth cross-entropy loss, `KL` transfers teacher soft-label information, `c_i` is the teacher confidence, `temperature=3.0`, and `alpha=0.4` in the main experiment.
 
 ## Quick Start
 
