@@ -1,7 +1,5 @@
 # ConfV2A Dataset and Code
 
-[中文说明](README_zh.md)
-
 **Confidence-Guided Vibration-to-Acoustic Distillation for Bottle Classification in Recycling Compactors**
 
 ConfV2A trains an audio-only bottle classifier with help from synchronized vibration signals. A vibration teacher is used during training, but deployment only needs microphone audio.
@@ -118,16 +116,14 @@ python train_audio_student_distill_paper_kl_ce.py
 
 ## Results
 
-### Cross-Dataset Comparison
+### Noise Robustness
 
-The same framework was also evaluated on three public synchronized audio-vibration datasets.
+Under waveform-level Gaussian noise, ConfV2A consistently outperforms standard knowledge distillation.
 
-| Dataset | Audio baseline | Vibration teacher | ConfV2A |
-| --- | ---: | ---: | ---: |
-| Our bottle/can dataset | 79.01% | 91.14% | **90.24%** |
-| UOEMD | 83.33% | 97.45% | **97.96%** |
-| MaFaulDa | 86.61% | 89.56% | **89.95%** |
-| QU-DMBF | 99.63% | 88.54% | **99.92%** |
+| Model | Clean | 30 dB | 20 dB | 10 dB | 5 dB | 0 dB |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Standard KD | 86.99% | 87.80% | 88.62% | 83.74% | 74.80% | 55.28% |
+| **ConfV2A** | **90.24%** | **91.87%** | **90.24%** | **86.18%** | **78.86%** | **56.10%** |
 
 ## Repository Map
 
