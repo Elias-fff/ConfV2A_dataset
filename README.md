@@ -1,5 +1,7 @@
 # ConfV2A Dataset and Code
 
+[中文说明](README_zh.md)
+
 **Confidence-Guided Vibration-to-Acoustic Distillation for Bottle Classification in Recycling Compactors**
 
 ConfV2A trains an audio-only bottle classifier with help from synchronized vibration signals. A vibration teacher is used during training, but deployment only needs microphone audio.
@@ -87,26 +89,31 @@ where `CE` is the ground-truth cross-entropy loss, `KL` transfers teacher soft-l
 
 ## Code Navigation
 
-The code is grouped under `code/`. For reading or reproducing the pipeline, follow this order:
+The source code is organized under `src/`. For reading or reproducing the pipeline, follow this order:
+
+> [!IMPORTANT]
+> The subfolders under `src/` are used to present the repository clearly on GitHub. The current scripts retain their original local imports and are not intended to run directly from this categorized layout.
+>
+> To run the code, place the Python source files from `src/models/`, `src/utils/`, `src/training/`, `src/experiments/`, and `src/evaluation/` together in one working directory. Keep the TCN file under `layers/tcn.py` inside that directory. In other words, use a flat source layout for execution rather than the categorized layout shown on the repository page.
 
 | Step | File | Purpose |
 | --- | --- | --- |
-| 1 | `code/Step1-Log.ipynb` | Converts raw sensor logs into processed vibration CSV files under `data/processed/`. |
-| 2 | `code/train_time_aligned_audio_spectrogram.py` | Trains the audio-only spectrogram CNN baseline. |
-| 3 | `code/train_time_aligned_tcn_teacher.py` | Trains the vibration-only TCN teacher. |
-| 4 | `code/train_audio_student_distill_paper_kl_ce.py` | Trains the main ConfV2A audio student with confidence-weighted KL + CE. |
-| 5 | `code/train_audio_student_distill_tcn_teacher.py` | Trains the standard KD baseline without confidence weighting. |
-| 6 | `code/train_audio_student_distill_paper_kl_ce_noise.py` | Runs ConfV2A noise robustness evaluation. |
-| 7 | `code/eval_no_confidence_student_waveform_noise.py` | Runs standard KD noise robustness evaluation. |
-| 8 | `code/run_paper_kl_ce_alpha_sweep_plain.py` | Runs the alpha sweep experiment. |
-| 9 | `code/test.py` | Runs single-file audio inference with a trained student model. |
+| 1 | `src/preprocessing/Step1-Log.ipynb` | Converts raw sensor logs into processed vibration CSV files under `data/processed/`. |
+| 2 | `src/training/train_time_aligned_audio_spectrogram.py` | Trains the audio-only spectrogram CNN baseline. |
+| 3 | `src/training/train_time_aligned_tcn_teacher.py` | Trains the vibration-only TCN teacher. |
+| 4 | `src/training/train_audio_student_distill_paper_kl_ce.py` | Trains the main ConfV2A audio student with confidence-weighted KL + CE. |
+| 5 | `src/training/train_audio_student_distill_tcn_teacher.py` | Trains the standard KD baseline without confidence weighting. |
+| 6 | `src/experiments/train_audio_student_distill_paper_kl_ce_noise.py` | Runs ConfV2A noise robustness evaluation. |
+| 7 | `src/evaluation/eval_no_confidence_student_waveform_noise.py` | Runs standard KD noise robustness evaluation. |
+| 8 | `src/experiments/run_paper_kl_ce_alpha_sweep_plain.py` | Runs the alpha sweep experiment. |
+| 9 | `src/evaluation/test.py` | Runs single-file audio inference with a trained student model. |
 
-Example command order:
+Example command order after preparing the flat working directory:
 
 ```bash
-python code/train_time_aligned_audio_spectrogram.py
-python code/train_time_aligned_tcn_teacher.py
-python code/train_audio_student_distill_paper_kl_ce.py
+python train_time_aligned_audio_spectrogram.py
+python train_time_aligned_tcn_teacher.py
+python train_audio_student_distill_paper_kl_ce.py
 ```
 
 ## Results
@@ -128,8 +135,18 @@ The same framework was also evaluated on three public synchronized audio-vibrati
 | --- | --- |
 | `data/raw/` | Raw audio and vibration recordings |
 | `data/processed/` | Processed vibration CSV files generated from sensor logs |
-| `code/` | Training, evaluation, preprocessing, and inference code |
-| `results/` | Trained models, reports, confusion matrices, alpha sweeps, and noise tests |
+| `src/models/` | Audio student and TCN model components |
+| `src/preprocessing/` | Sensor-log preprocessing notebook |
+| `src/training/` | Baseline, teacher, and student training scripts |
+| `src/experiments/` | Noise robustness and alpha-sweep experiments |
+| `src/evaluation/` | Evaluation and single-file inference scripts |
+| `src/utils/` | Shared event-window and synchronization utilities |
+| `results/main/` | Main paper models and reports |
+| `results/baselines/` | Standard knowledge-distillation baselines |
+| `results/ablations/` | Alpha-sweep and ablation outputs |
+| `results/robustness/` | Waveform-noise robustness evaluations |
+| `results/supplementary/` | Newly trained and supplementary runs |
+| `results/inference/` | Single-file inference outputs |
 | `figures/` | Images used by this README and the project page |
 | `index.html` | Optional lightweight GitHub Pages project page |
 
@@ -140,20 +157,20 @@ The same framework was also evaluated on three public synchronized audio-vibrati
 | --- | --- |
 | `data/raw/sensor_plot_project/` | Raw synchronized audio and vibration recordings |
 | `data/processed/` | Processed vibration CSV files |
-| `code/Step1-Log.ipynb` | Sensor-log preprocessing notebook |
-| `code/audio_student_model.py` | Audio loading, windowing, spectrogram, and CNN utilities |
-| `code/event_windows.py` | Time-aligned audio-vibration window utilities |
-| `code/layers/tcn.py` | TCN layer used by the vibration teacher |
-| `results/original_time_aligned_audio_spectrogram_outputs/` | Original audio-only CNN model and reports used for main results |
-| `results/original_time_aligned_tcn_teacher_outputs/` | Original vibration teacher model and reports used for main results |
-| `results/time_aligned_audio_spectrogram_outputs/` | Newly trained audio-only model outputs |
-| `results/time_aligned_tcn_teacher_outputs/` | Newly trained vibration teacher outputs |
-| `results/distill_outputs_paper_kl_ce_old/` | Main ConfV2A results with original models |
-| `results/distill_outputs_paper_kl_ce_no_confidence_old/` | Standard KD results with original models |
-| `results/distill_outputs_paper_kl_ce_alpha_sweep_plain_old/` | Alpha sweep with original models |
-| `results/distill_outputs_paper_kl_ce_waveform_noise_snr_test_old/` | ConfV2A waveform-level noise evaluation |
-| `results/distill_outputs_paper_kl_ce_no_confidence_waveform_noise_snr_test_old/` | Standard KD waveform-level noise evaluation |
-| `results/distill_outputs_paper_kl_ce_alpha_sweep_new/` | Supplementary alpha sweep with newly trained models |
+| `src/preprocessing/Step1-Log.ipynb` | Sensor-log preprocessing notebook |
+| `src/models/audio_student_model.py` | Audio loading, windowing, spectrogram, and CNN utilities |
+| `src/utils/event_windows.py` | Time-aligned audio-vibration window utilities |
+| `src/models/layers/tcn.py` | TCN layer used by the vibration teacher |
+| `results/main/original_time_aligned_audio_spectrogram_outputs/` | Original audio-only CNN model and reports used for main results |
+| `results/main/original_time_aligned_tcn_teacher_outputs/` | Original vibration teacher model and reports used for main results |
+| `results/supplementary/time_aligned_audio_spectrogram_outputs/` | Newly trained audio-only model outputs |
+| `results/supplementary/time_aligned_tcn_teacher_outputs/` | Newly trained vibration teacher outputs |
+| `results/main/distill_outputs_paper_kl_ce_old/` | Main ConfV2A results with original models |
+| `results/baselines/distill_outputs_paper_kl_ce_no_confidence_old/` | Standard KD results with original models |
+| `results/ablations/distill_outputs_paper_kl_ce_alpha_sweep_plain_old/` | Alpha sweep with original models |
+| `results/robustness/distill_outputs_paper_kl_ce_waveform_noise_snr_test_old/` | ConfV2A waveform-level noise evaluation |
+| `results/robustness/distill_outputs_paper_kl_ce_no_confidence_waveform_noise_snr_test_old/` | Standard KD waveform-level noise evaluation |
+| `results/supplementary/distill_outputs_paper_kl_ce_alpha_sweep_new/` | Supplementary alpha sweep with newly trained models |
 
 </details>
 
@@ -162,8 +179,8 @@ The same framework was also evaluated on three public synchronized audio-vibrati
 The main reported evaluations were performed with:
 
 ```text
-results/original_time_aligned_audio_spectrogram_outputs/
-results/original_time_aligned_tcn_teacher_outputs/
+results/main/original_time_aligned_audio_spectrogram_outputs/
+results/main/original_time_aligned_tcn_teacher_outputs/
 ```
 
 For the main paper-aligned results, prioritize folders ending in `_old`. The `time_aligned_*` and `*_new` folders are supplementary runs using newly trained models after a system update.
