@@ -144,7 +144,6 @@ Under waveform-level Gaussian noise, ConfV2A consistently outperforms standard k
 | `results/supplementary/` | Newly trained and supplementary runs |
 | `results/inference/` | Single-file inference outputs |
 | `figures/` | Images used by this README and the project page |
-| `index.html` | Optional lightweight GitHub Pages project page |
 
 <details>
 <summary>Detailed folder contents</summary>
